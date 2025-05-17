@@ -1,0 +1,28 @@
+name: network_viz
+version: "1.0.0"
+description: "Network graph visualization plugin for IDEF"
+author: "IDEF Team"
+plugin_type: VISUALIZATION
+entry_point: idef.extensions.plugins.network_viz.visualizer
+dependencies:
+  - networkx>=2.6.0
+  - pyvis>=0.2.0
+config_schema:
+  type: object
+  properties:
+    height:
+      type: string
+      description: "Height of the network visualization"
+      default: "500px"
+    width:
+      type: string
+      description: "Width of the network visualization"
+      default: "100%"
+    bgcolor:
+      type: string
+      description: "Background color"
+      default: "#ffffff"
+    font_color:
+      type: string
+      description: "Font color for node labels"
+      default: "#000000" 

@@ -1,0 +1,27 @@
+name: mongodb_connector
+version: "1.0.0"
+description: "MongoDB data connector for IDEF"
+author: "IDEF Team"
+plugin_type: DATA_CONNECTOR
+entry_point: idef.extensions.plugins.mongodb_connector.connector
+dependencies:
+  - pymongo>=4.0.0
+config_schema:
+  type: object
+  properties:
+    host:
+      type: string
+      description: "MongoDB host"
+    port:
+      type: integer
+      description: "MongoDB port"
+    database:
+      type: string
+      description: "Database name"
+    collection:
+      type: string
+      description: "Collection name"
+  required:
+    - host
+    - database
+    - collection 
